@@ -5,27 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emotion Dice</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- dice -->
     <div class="dice-container">
-      <button class="dice-wrap">
-        <div class="cube">
-          <div class="face front"><span>Happy</span></div>
-          <div class="face back"><span>Sad</span></div>
-          <div class="face right"><span>Motivating</span></div>
-          <div class="face left"><span>Calm</span></div>
-          <div class="face top"><span>Excited</span></div>
-          <div class="face bottom"><span>Toxic</span></div>
-        </div>
-      </button>
+      <img id="dice" src="images/dice-1.png" alt="dice" width="150" />
     </div>
-    <audio src="happy-msuic.mp3"></audio>
-    <audio src="sad-music.mp3"></audio>
-    <audio src="motivating-music.mp3"></audio>
-    <audio src="calm-music.mp3"></audio>
-    <audio src="excited-music.mp3"></audio>
-    <audio src="toxic-music.mp3"></audio>
+
+    <button id="rollBtn">Roll the dice</button>
+
+    <audio id="audioPlayer" controls hidden></audio>
+
     <!-- panel -->
     <div class="panel">
       <div class="song-title"></div>
