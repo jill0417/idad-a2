@@ -1,6 +1,7 @@
 const dice = document.getElementById("dice");
 const rollBtn = document.getElementById("rollBtn");
 const audioPlayer = document.getElementById("audioPlayer");
+const songTitleEl = docement.querySelector(".song-title");
 
 function rollDice() {
   let counter = 0;
