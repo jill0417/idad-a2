@@ -6,20 +6,27 @@
     <title>Emotion Dice</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Fascinate&family=Niconne&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <h1>Emotion Dice</h1>
     <!-- dice -->
-    <div class="dice-container">
-      <img id="dice" src="images/dice-1.png" alt="dice" width="150" />
-    </div>
+    <div class="side">
+      <div class="dice-container">
+        <img id="dice" src="images/dice-cover.png" alt="dice" width="150" />
+      </div>
 
+      <!-- panel -->
+      <div class="panel">
+        <div class="song-title"></div>
+        <audio id="audioPlayer" controls></audio>
+      </div>
+    </div>
     <button id="rollBtn">Roll the dice</button>
-
-    <audio id="audioPlayer" controls></audio>
-
-    <!-- panel -->
-    <div class="panel">
-      <div class="song-title"></div>
-    </div>
   </body>
 </html>
