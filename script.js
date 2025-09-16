@@ -50,6 +50,7 @@ function playEmotion(index) {
 
 rollBtn.addEventListener("click", rollDice);
 
+// volume slider
 audioPlayer.volume = volumeSlider.value / 100;
 volumeSlider.addEventListener("input", function () {
   audioPlayer.volume = this.value / 100;

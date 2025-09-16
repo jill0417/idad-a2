@@ -14,23 +14,31 @@
     />
   </head>
   <body>
-    <h1>Emotion Dice</h1>
-    <!-- dice -->
-    <div class="side">
-      <div class="dice-container">
-        <img id="dice" src="images/dice-cover.png" alt="dice" width="150" />
-      </div>
+    <div class="main">
+      <h1>Emotion Dice</h1>
+      <!-- dice -->
+      <div class="side">
+        <div class="dice-container">
+          <img id="dice" src="images/dice-cover.png" alt="dice" width="150" />
+        </div>
 
-      <!-- panel -->
-      <div class="panel">
-        <div class="song-title"></div>
-        <audio id="audioPlayer" controls></audio>
+        <!-- panel -->
+        <div class="panel">
+          <div class="song-title"></div>
+          <audio id="audioPlayer" controls></audio>
+          <div class="volume-control">
+            <label for="volumeSlider">Volume</label>
+            <input
+              type="range"
+              id="volumeSlider"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+        </div>
       </div>
-      <div class="volume-control">
-        <label for="volumeSlider">Volume:</label>
-        <input type="range" id="volumeSlider" min="0" max="100" value="50" />
-      </div>
+      <button id="rollBtn">Roll the dice</button>
     </div>
-    <button id="rollBtn">Roll the dice</button>
   </body>
 </html>
