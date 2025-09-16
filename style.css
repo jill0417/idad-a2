@@ -52,3 +52,29 @@ h1 {
   font-size: 20px;
   margin-left: 75px;
 }
+
+#volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    white 0 var(--progress, 30%),
+    pink var(--progress, 60%)
+  );
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgb(124, 96, 154);
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgb(149, 147, 147);
+  cursor: pointer;
+}

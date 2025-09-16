@@ -2,6 +2,7 @@ const dice = document.getElementById("dice");
 const rollBtn = document.getElementById("rollBtn");
 const audioPlayer = document.getElementById("audioPlayer");
 const songTitleEl = document.querySelector(".song-title");
+const volumeSlider = document.getElementById("volumeSlider");
 
 const faces = [
   { label: "Happy", img: "images/dice-5.png", audio: "music/happy.mp3" },
@@ -48,3 +49,8 @@ function playEmotion(index) {
 }
 
 rollBtn.addEventListener("click", rollDice);
+
+audioPlayer.volume = volumeSlider.value / 100;
+volumeSlider.addEventListener("input", function () {
+  audioPlayer.volume = this.value / 100;
+});
