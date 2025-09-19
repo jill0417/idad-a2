@@ -2,55 +2,72 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(rgb(20, 40, 72), rgb(213, 181, 222));
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .main {
-  place-items: center;
+  align-items: center;
+  justify-items: center;
   display: grid;
-  gap: 10px;
-}
-.dice-container {
-  background: white;
-  border-radius: 20px;
-  margin: 30px;
-  max-width: 90%;
+  gap: 14px;
 }
 
 h1 {
   color: aliceblue;
   text-align: center;
-  margin: 30px;
+  margin: 10px 0 4px;
   font-family: "Fascinate", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 70px;
+  font-size: 90px;
 }
+
 .side {
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 
+.dice-container {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  margin: 30px;
+  max-width: 90%;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 18);
+}
+
+#dice {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+#dice.rolling {
+  animation: wobble 0.6s ease-in-out infinite;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  gap: 15px;
+}
 .song-title {
   color: aliceblue;
   margin: 10px;
-  font-size: 40px;
+  font-size: 35px;
   font-family: "Niconne", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-#dice {
-  width: 400px;
-}
-
 #rollBtn {
   border-radius: 10px;
   padding: 10px;
-  background: rgb(241, 190, 200);
+  background: rgb(239, 156, 173);
   color: white;
   font-family: "Cherry Bomb One", system-ui;
   font-weight: 400;
@@ -62,7 +79,13 @@ h1 {
 }
 
 #rollBtn:hover {
-  background: rgb(232, 142, 159);
+  background: rgb(182, 101, 115);
+}
+
+#rollBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .volume-control {
@@ -79,7 +102,7 @@ h1 {
 #volumeSlider {
   -webkit-appearance: none;
   appearance: none;
-  width: 300px;
+  width: 230px;
   height: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -106,9 +129,38 @@ h1 {
   transform: scale(1.2);
 }
 
-.panel {
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.player-control {
   display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#playPauseBtn {
+  background: rgb(242, 182, 192);
+  padding: 2px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#muteBtn {
+  background: rgb(242, 182, 192);
+  padding: 2px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

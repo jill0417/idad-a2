@@ -21,21 +21,22 @@
         <div class="dice-container">
           <img id="dice" src="images/dice-cover.png" alt="dice" width="150" />
         </div>
-
+        <audio id="audioPlayer" preload="metadata"></audio>
         <!-- panel -->
         <div class="panel">
           <div class="song-title"></div>
-          <audio id="audioPlayer" controls></audio>
-          <div class="volume-control">
-            <label for="volumeSlider">Volume</label>
-            <input
-              type="range"
-              id="volumeSlider"
-              min="0"
-              max="100"
-              value="50"
-            />
+          <div class="player-control">
+            <button id="playPauseBtn" class="btn">
+              <img id="playPauseIcon" src="icon/pause.png" alt="play" />
+            </button>
+            <button id="muteBtn" class="btn">
+              <img id="muteIcon" src="icon/mute.png" alt="unmute" />
+            </button>
           </div>
+        </div>
+        <div class="volume-control">
+          <label for="volumeSlider">Volume</label>
+          <input type="range" id="volumeSlider" min="0" max="100" value="50" />
         </div>
       </div>
       <button id="rollBtn">Roll the dice</button>
