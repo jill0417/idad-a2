@@ -9,17 +9,49 @@ const songTitleEl = document.querySelector(".song-title");
 const volumeSlider = document.getElementById("volumeSlider");
 
 const faces = [
-  { label: "Happy", img: "images/dice-5.png", audio: "music/happy.mp3" },
-  { label: "Sad", img: "images/dice-6.png", audio: "music/sad.mp3" },
-  { label: "Angry", img: "images/dice-2.png", audio: "music/angry.mp3" },
-  { label: "Calm", img: "images/dice-3.png", audio: "music/calm.mp3" },
-  { label: "Excited", img: "images/dice-4.png", audio: "music/excited.mp3" },
+  {
+    label: "Happy",
+    img: "images/dice-5.png",
+    audio: "music/happy.mp3",
+    title: "Happy Vibe",
+  },
+  {
+    label: "Sad",
+    img: "images/dice-6.png",
+    audio: "music/sad.mp3",
+    title: "Sad Piano",
+  },
+  {
+    label: "Angry",
+    img: "images/dice-2.png",
+    audio: "music/angry.mp3",
+    title: "Evil Clown's Anthem",
+  },
+  {
+    label: "Calm",
+    img: "images/dice-3.png",
+    audio: "music/calm.mp3",
+    title: "Lofi Relax",
+  },
+  {
+    label: "Excited",
+    img: "images/dice-4.png",
+    audio: "music/excited.mp3",
+    title: "Big Day Out",
+  },
   {
     label: "Frustrated",
     img: "images/dice-1.png",
     audio: "music/frustrated.mp3",
+    title: "Hard Times",
   },
 ];
+
+let introModal = document.getElementById("introDialog");
+document.getElementById("introDialog").showModal();
+document.getElementById("dialogCloseButton").addEventListener("click", () => {
+  introModal.close();
+});
 
 function rollDice() {
   let counter = 0;
@@ -82,9 +114,10 @@ function playEmotion(index) {
   audioPlayer.currentTime = 0;
   audioPlayer.src = f.audio;
 
-  songTitleEl.textContent = `${f.label} - Now playing: ${f.audio
-    .split("/")
-    .pop()}`;
+  const panel = document.querySelector(".panel");
+  panel.classList.add("show");
+
+  songTitleEl.textContent = `${f.label} — Now playing: ${f.title}`;
 
   audioPlayer.play().catch(() => {
     songTitleEl.textContent += "(Press Play to start)";

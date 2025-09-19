@@ -14,6 +14,12 @@
     />
   </head>
   <body>
+    <!-- Intro popup -->
+    <dialog id="introDialog">
+      <p>Notice! This website will play sounds when you roll the dice.</p>
+      <button id="dialogCloseButton" autofocus>OK</button>
+    </dialog>
+
     <div class="main">
       <h1>Emotion Dice</h1>
       <!-- dice -->
@@ -33,10 +39,16 @@
               <img id="muteIcon" src="icon/mute.png" alt="unmute" />
             </button>
           </div>
-        </div>
-        <div class="volume-control">
-          <label for="volumeSlider">Volume</label>
-          <input type="range" id="volumeSlider" min="0" max="100" value="50" />
+          <div class="volume-control">
+            <label for="volumeSlider">Volume</label>
+            <input
+              type="range"
+              id="volumeSlider"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
         </div>
       </div>
       <button id="rollBtn">Roll the dice</button>
