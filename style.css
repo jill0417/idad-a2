@@ -132,7 +132,7 @@ h1 {
   background: linear-gradient(
     90deg,
     white 0 var(--progress, 30%),
-    pink var(--progress, 60%)
+    rgb(225, 137, 152) var(--progress, 60%)
   );
 }
 
